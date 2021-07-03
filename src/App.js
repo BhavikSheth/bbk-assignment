@@ -4,11 +4,12 @@ import {Route, Switch} from "react-router-dom"
 
 import Home from "./pages/Home/Home";
 import Contact from "./pages/Contact/Contact";
+import Navigation from './components/Navigation/Navigation';
 
 function App() {
   return (
     <div className="App">
-      {/* <Navigation /> */}
+      <Navigation />
 
       <Switch>
         <Route path="/" exact>
