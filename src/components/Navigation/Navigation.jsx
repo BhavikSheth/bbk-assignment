@@ -16,6 +16,10 @@ const Navigation = (props) => {
         <li>
           <NavLink to="/weather">Weather</NavLink>
         </li>
+
+        <li>
+          <NavLink to="/weather-on-load">Weather On Load</NavLink>
+        </li>
       </ul>
     </nav>
   );

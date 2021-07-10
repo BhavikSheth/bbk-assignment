@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+import Input from "../../components/Input/Input";
+
 const Weather = () => {
   const [weatherInput, setWeatherInput] = useState("");
   const [weatherData, setWeatherData] = useState(null);
@@ -39,7 +41,7 @@ const Weather = () => {
     <div id="weather-page">
       <h1>Live Weather Information</h1>
 
-      <input type="text" onChange={(e) => setWeatherInput(e.target.value)} value={weatherInput} />
+      <Input type="text" onChange={(e) => setWeatherInput(e.target.value)} value={weatherInput} id="weather" label="Weather Input" />
 
       <form onSubmit={handleWeatherSubmit}>
         <button type="submit">Get Weather</button>

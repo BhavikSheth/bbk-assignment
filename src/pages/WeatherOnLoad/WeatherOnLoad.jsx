@@ -10,9 +10,14 @@ const Weather = () => {
   }, []);
 
   const getLocation = () => {
-    navigator.geolocation.getCurrentPosition((pos) => {
-      setLocation(pos.coords);
-    });
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        setLocation(pos.coords);
+      },
+      () => {
+        alert("You blocked location");
+      }
+    );
   };
 
   useEffect(() => {
